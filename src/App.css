@@ -1,0 +1,93 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-container {
+  height: auto;
+  width: auto;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.Header-Container {
+  padding: 12px;
+  background-color: #ECF0F1;
+  color: red;
+  height: 60px;
+}
+
+.Header-BurgerButton {
+  padding-top: -10px;
+  padding-left: 30px;
+  vertical-align: top;
+}
+
+.SideBar-Collapse {
+  background-color: #2f353a;
+  height: 300px;
+  max-width: 200px;
+  float: left;
+  -webkit-transition: all 1s ease;
+  overflow: hidden;
+  padding: 10px 40px 10px 20px;
+  margin-right: 0px;
+  color: #ECF0F1;
+}
+
+.Main-Container {
+  width: 100%;
+  padding-right: 15%;
+  padding-left: 15%;
+  margin-right: 15%;
+  margin-left: 50px;
+}
+
+.BrandCol {
+  vertical-align: bottom;
+}
+
+.NavbarBrand {
+  margin-left: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  vertical-align: middle;
+}
+
+.NavLinks {
+  height: 35px;
+}
+
+.NavRight {
+  text-align: right;
+}
+
+.NavWelcome {
+  margin-left: 1rem;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
