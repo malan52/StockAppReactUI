@@ -7,7 +7,7 @@ DropdownToggle, DropdownMenu, DropdownItem,
 Breadcrumb, BreadcrumbItem
 } from 'reactstrap';
 
-import Stock from './Stock';
+import Stocks from './Stocks';
 import News from './News';
 
 class Main extends Component {
@@ -39,7 +39,7 @@ class Main extends Component {
         </div>
 
         <div className="Main-Container" style={{ paddingLeft: this.mainContainerPaddingSize() }}>
-          <Stock />
+          <Stocks />
           <News />
         </div>
       </div>

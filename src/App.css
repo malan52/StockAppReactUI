@@ -44,7 +44,7 @@
 
 .SideBar-Collapse {
   background-color: #2f353a;
-  height: 300px;
+  height: 500px;
   max-width: 200px;
   float: left;
   -webkit-transition: all 1s ease;
@@ -60,6 +60,37 @@
   padding-left: 15%;
   margin-right: 15%;
   margin-left: 50px;
+}
+
+.Stocks-div2 {
+  padding: 5px 5px 5px 5px;
+  border: 2px solid #ECF0F1;
+  border-radius: 12px;
+  width: 35%;
+  min-width: 300px;
+}
+
+.Stock-Carousel {
+  height: 100px;
+  width: 100%;
+  background-color: #C9E9F2;
+  font: 50;
+}
+
+.Stock-CarouselItem-div {
+  color: #23282c;
+  text-align: center;
+  padding-top: auto;
+  font-size: 20px;
+  line-height: 100px;
+}
+
+.StocksCarouse-ListGroupItem-Col2 {
+  text-align: right;
+}
+
+.StocksCarouse-ListGroupItem-Col2-Badge {
+  margin-left: 5%;
 }
 
 .BrandCol {
@@ -79,6 +110,7 @@
 
 .NavRight {
   text-align: right;
+  float: right;
 }
 
 .NavWelcome {
