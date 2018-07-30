@@ -54,6 +54,10 @@
   color: #ECF0F1;
 }
 
+.Main-Breadcrumb {
+  border-top: 1px solid #c8ced3;
+}
+
 .Main-Container {
   width: 100%;
   padding-right: 15%;
@@ -71,18 +75,24 @@
 }
 
 .Stock-Carousel {
-  height: 100px;
+  height: 80px;
   width: 100%;
-  background-color: #C9E9F2;
+  background-color: #e4e7ea;
   font: 50;
 }
 
 .Stock-CarouselItem-div {
   color: #23282c;
+  font-size: 16px;
+  font-weight: bold;
   text-align: center;
   padding-top: auto;
-  font-size: 20px;
-  line-height: 100px;
+  line-height: 80px;
+  margin-bottom: 20px;
+}
+
+.StocksCarouse-CarouselIndicators {
+
 }
 
 .StocksCarouse-ListGroupItem-Col2 {
@@ -91,6 +101,8 @@
 
 .StocksCarouse-ListGroupItem-Col2-Badge {
   margin-left: 5%;
+  text-align: center;
+  width: 30px;
 }
 
 .BrandCol {

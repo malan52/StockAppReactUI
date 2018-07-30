@@ -10,82 +10,101 @@ import {
   ListGroupItemHeading, ListGroupItemText
 } from 'reactstrap';
 
+import icon_up from '../images/icon_up_white.png';
+import icon_down from '../images/icon_down_white.png';
+
 var stockInfo = [
   {
     symbol: 'AAPL',
-    currentPrice: 2.99
+    currentPrice: 2.99,
+    growth: false
   },
   {
     symbol: 'FB',
-    currentPrice: 222.99
+    currentPrice: 222.99,
+    growth: true
   },
   {
     symbol: 'TSLA',
-    currentPrice: 22.99
+    currentPrice: 22.99,
+    growth: true
   },
   {
     symbol: 'RBC',
-    currentPrice: 402.99
+    currentPrice: 402.99,
+    growth: false
   }
 ];
 
 var stockInfo2 = [
   {
     symbol: 'RBC',
-    currentPrice: 2.99
+    currentPrice: 2.99,
+    growth: true
   },
   {
     symbol: 'IQ',
-    currentPrice: 222.99
+    currentPrice: 222.99,
+    growth: false
   },
   {
     symbol: 'MOMO',
-    currentPrice: 22.99
+    currentPrice: 22.99,
+    growth: false
   }
 ];
 
 var stockInfo3 = [
   {
     symbol: 'ABC',
-    currentPrice: 2.99
+    currentPrice: 2.99,
+    growth: true
   },
   {
     symbol: 'FRRF',
-    currentPrice: 222.99
+    currentPrice: 222.99,
+    growth: false
   },
   {
     symbol: 'DDDD',
-    currentPrice: 22.99
+    currentPrice: 22.99,
+    growth: true
   },
   {
     symbol: 'RBC',
-    currentPrice: 402.99
+    currentPrice: 402.99,
+    growth: true
   }
 ];
 
 var stockInfo4 = [
   {
     symbol: 'ABC',
-    currentPrice: 2.99
+    currentPrice: 2.99,
+    growth: true
   },
   {
     symbol: 'FRRF',
-    currentPrice: 222.99
+    currentPrice: 222.99,
+    growth: false
   },
   {
     symbol: 'RBC',
-    currentPrice: 402.99
+    currentPrice: 402.99,
+    growth: true
   }
 ];
 
 var stockInfo5 = [
   {
     symbol: 'ABC',
-    currentPrice: 2.99
+    currentPrice: 2.99,
+    growth: true
   },
   {
     symbol: 'FRRF',
-    currentPrice: 222.99
+    currentPrice: 222.99,
+    growth: false
   }
 ];
 
@@ -176,13 +195,17 @@ class StocksCarouse extends Component {
 
     const symbolList = watchLists[this.state.activeIndex].stocksList.map((symbol) => {
       const active = (this.state.activeIndex == 2) ? true : false;
-      const rbc = (symbol.symbol == "RBC") ? "danger" : "success";
+      const growth = (symbol.growth) ? "success" : "danger";
+      const icon = (symbol.growth) ?
+      <img src={icon_up} width="10px" height="10px" />
+      :
+      <img src={icon_down} width="10px" height="10px" />;
       return (
         <ListGroupItem
           active={active}
           tag="button"
           action
-          onClick={() => console.log("Clicked")}
+          onClick={() => console.log("Clicked: " + symbol.symbol)}
           key={symbol.symbol}
         >
           <Row>
@@ -191,7 +214,9 @@ class StocksCarouse extends Component {
             </Col>
             <Col className="StocksCarouse-ListGroupItem-Col2">
               {symbol.currentPrice}
-              <Badge color={rbc} className="StocksCarouse-ListGroupItem-Col2-Badge">Primary</Badge>
+              <Badge color={growth} className="StocksCarouse-ListGroupItem-Col2-Badge">
+                {icon}
+              </Badge>
             </Col>
           </Row>
         </ListGroupItem>
@@ -207,7 +232,7 @@ class StocksCarouse extends Component {
           interval={null}
           className="Stock-Carousel"
         >
-          <CarouselIndicators items={watchLists} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+          <CarouselIndicators className="StocksCarouse-CarouselIndicators" items={watchLists} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
           {slides}
           <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
           <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />

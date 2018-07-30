@@ -30,11 +30,10 @@ class Main extends Component {
     return (
       <div>
         <div>
-          <Breadcrumb tag="nav">
+          <Breadcrumb tag="nav" className="Main-Breadcrumb">
             <BreadcrumbItem tag="a" href="#">Home</BreadcrumbItem>
-            <BreadcrumbItem tag="a" href="#">Library</BreadcrumbItem>
-            <BreadcrumbItem tag="a" href="#">Data</BreadcrumbItem>
-            <BreadcrumbItem active tag="span">Bootstrap</BreadcrumbItem>
+            <BreadcrumbItem tag="a" href="#">User</BreadcrumbItem>
+            <BreadcrumbItem active tag="span">Watch Lists</BreadcrumbItem>
           </Breadcrumb>
         </div>
 
